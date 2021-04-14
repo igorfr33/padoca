@@ -13,7 +13,6 @@ class _LoginState extends State<Login> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
@@ -68,19 +67,33 @@ class _LoginState extends State<Login> {
                                           children: <Widget>[
                                             TextFormField(
                                               decoration: InputDecoration(
+                                                enabledBorder: OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Colors.white,
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius: BorderRadius.zero,
+                                                ),
                                                 hintText: "Usuário",
                                                 hintStyle: TextStyle(color: Colors.white),
                                                 focusColor: Colors.white,
-                                                prefixIcon: Icon(Icons.account_circle_outlined),
+                                                prefixIcon: Icon(Icons.account_circle_outlined,color: Colors.white,),
                                               ),
                                               keyboardType: TextInputType.emailAddress,
                                             ),
                                             TextFormField(
                                               decoration: InputDecoration(
                                                 hintText: "Senha",
+                                                enabledBorder: OutlineInputBorder(
+                                                  borderSide: BorderSide(
+                                                    color: Colors.white,
+                                                    width: 1,
+                                                  ),
+                                                  borderRadius: BorderRadius.zero,
+                                                ),
                                                 hintStyle: TextStyle(color: Colors.white),
                                                 focusColor: Colors.white,
-                                                prefixIcon: Icon(Icons.vpn_key_outlined),
+                                                prefixIcon: Icon(Icons.vpn_key_outlined, color: Colors.white,),
                                                 suffixIcon: GestureDetector(
                                                   child:Icon(
                                                     _showPassword == false? Icons.visibility_off:Icons.visibility, color: Colors.white,
@@ -162,4 +175,3 @@ class _LoginState extends State<Login> {
     );
   }
 }
-
